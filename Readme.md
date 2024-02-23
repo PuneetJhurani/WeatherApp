@@ -18,6 +18,10 @@ To run The Tests -
 1. Click on run button adjacent to WeatherViewModelTests.
 2. Click on run button adjacent to RepositoryTestCases.
 
+To run UI Tests - 
+
+1. Click on run button adjacent to WeatherAppUITests.
+ 
 To check Coverge -
 
 1. Right Click on Any Test Suite -> Jump to Report
