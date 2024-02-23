@@ -8,6 +8,14 @@
 import XCTest
 
 final class WeatherAppUITests: XCTestCase {
+    
+    var app: XCUIApplication!
+    
+    override  func setUp() {
+        app = XCUIApplication()
+        app!.launchArguments =  ["enable-testing"]
+        app!.launch()
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,13 +29,20 @@ final class WeatherAppUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testEmptyPinCode() {
+        app.textFields["Pincode"].tap()
+        app.textFields["Pincode"].typeText("")
+        app.buttons["Search"].tap()
+        XCTAssertTrue(app.staticTexts["Empty pincode"].waitForExistence(timeout: 2.0 ),  "Message not found")
+    }
+    
+    func testWeatherForecast() {
+        
+        app.textFields["Pincode"].tap()
+        app.textFields["Pincode"].typeText("110088")
+        app.buttons["Search"].tap()
+        XCTAssertTrue(app.collectionViews["ForecastList"].waitForExistence(timeout: 5.0), "Forecast not found")
     }
 
     func testLaunchPerformance() throws {
