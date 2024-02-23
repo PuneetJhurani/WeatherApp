@@ -50,9 +50,9 @@ class ApiManager: NetworkProtocol {
             if var urlComponents = URLComponents(string: baseUrl){
                 
                 urlComponents.queryItems = [
-                    URLQueryItem(name: "zip", value: "\(pincode),IN"),
+                    URLQueryItem(name: "zip", value: "\(pincode),\(CountryCode.India)"),
                     URLQueryItem(name: "appid", value:ApiKeys.weatherApi),
-                    URLQueryItem(name: "units", value : "metric" )
+                    URLQueryItem(name: "units", value : Units.metric )
                     
                 ]
                 guard let url = urlComponents.url else {

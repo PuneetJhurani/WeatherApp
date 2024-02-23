@@ -12,6 +12,14 @@ enum ApiKeys  {
     static let weatherApi = "37cfcf670572830fe44ec6c6f4cfbc41"
 }
 
+enum CountryCode  {
+    static let India = "IN"
+}
+
+enum Units {
+    static let metric = "metric"
+}
+
 enum FirebaseEventParams {
     static let platform = "Platform"
     static let osversion = "os_version"
