@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A516D9E12B871D4E00AB1F4B /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A516D9E02B871D4E00AB1F4B /* Swinject */; };
-		A516D9E32B871D4E00AB1F4B /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A516D9E22B871D4E00AB1F4B /* Swinject-Dynamic */; };
 		A559A3672B88B0600060AAEB /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559A3632B88B0590060AAEB /* MockApiManager.swift */; };
 		A559A3682B88B0630060AAEB /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559A3642B88B0590060AAEB /* MockRepository.swift */; };
 		A559A36A2B88BBBE0060AAEB /* RepositoryTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559A3692B88BBBE0060AAEB /* RepositoryTestCases.swift */; };
@@ -100,7 +99,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A516D9E12B871D4E00AB1F4B /* Swinject in Frameworks */,
-				A516D9E32B871D4E00AB1F4B /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +152,7 @@
 		A5DD0A5C2B862E8A00788599 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5DD0A882B862F2800788599 /* Constants */,
 				A5DD0AB32B86308200788599 /* Features */,
 				A5DD0AB02B86307A00788599 /* Analytics */,
 				A5DD0AAD2B86305000788599 /* AppSettings */,
@@ -163,7 +162,6 @@
 				A5DD0A952B862F4C00788599 /* Base */,
 				A5DD0A8E2B862F3F00788599 /* Network */,
 				A5DD0A8B2B862F3600788599 /* Platform */,
-				A5DD0A882B862F2800788599 /* Constants */,
 				A5DD0A5D2B862E8A00788599 /* WeatherApp.swift */,
 				A5DD0A612B862E8B00788599 /* Assets.xcassets */,
 				A5DD0A632B862E8B00788599 /* WeatherApp.entitlements */,
@@ -339,7 +337,6 @@
 			name = WeatherApp;
 			packageProductDependencies = (
 				A516D9E02B871D4E00AB1F4B /* Swinject */,
-				A516D9E22B871D4E00AB1F4B /* Swinject-Dynamic */,
 			);
 			productName = WeatherApp;
 			productReference = A5DD0A5A2B862E8A00788599 /* WeatherApp.app */;
@@ -653,7 +650,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -689,7 +685,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -712,7 +707,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nagarro.WeatherAppTests;
@@ -734,7 +728,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nagarro.WeatherAppTests;
@@ -755,7 +748,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nagarro.WeatherAppUITests;
@@ -776,7 +768,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nagarro.WeatherAppUITests;
@@ -847,11 +838,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A516D9DF2B871D4E00AB1F4B /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		A516D9E22B871D4E00AB1F4B /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A516D9DF2B871D4E00AB1F4B /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
